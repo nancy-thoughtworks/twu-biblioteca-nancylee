@@ -26,7 +26,7 @@ public class BibliotecaApp {
 
 
         while(true) {
-            Scanner scanner = new Scanner(System.in);
+
             //Print the options for the user to choose from
             System.out.println("*****Menu Options*****");
             System.out.println("*. Press s to see List of books");
@@ -34,35 +34,40 @@ public class BibliotecaApp {
             System.out.println("*. Press r to borrow a book");
             System.out.println("*. Press q to quit");
 
-            char userInput = scanner.next().charAt(0);
-            int bookID;
-            switch (userInput) {
-                case 's':
-                    printList(booklist);
-                    break;
-                case 'b':
-                    System.out.println("Enter the book ID you wish to borrow");
-                    bookID = scanner.nextInt();
-                    borrow(booklist, bookID);
-                    break;
-                case 'r':
-                    System.out.println("Enter the book ID you wish to return");
-                    bookID = scanner.nextInt();
-                    returnBook(booklist, bookID);
-                    break;
-                case 'q':
-                    System.exit(0);
-                    break;
-                default:
-                    System.out.println("Please select a valid option");
 
-            }
-
+            BibliotecaApp.menuOptions(booklist);
 
         }
 
     }
 
+    public static void menuOptions(HashMap<Integer, Book> booklist) {
+        Scanner scanner = new Scanner(System.in);
+        char userInput = scanner.next().charAt(0);
+        int bookID;
+        switch (userInput) {
+            case 's':
+                printList(booklist);
+                break;
+            case 'b':
+                System.out.println("Enter the book ID you wish to borrow");
+                bookID = scanner.nextInt();
+                borrow(booklist, bookID);
+                break;
+            case 'r':
+                System.out.println("Enter the book ID you wish to return");
+                bookID = scanner.nextInt();
+                returnBook(booklist, bookID);
+                break;
+            case 'q':
+                System.exit(0);
+                break;
+            default:
+                System.out.println("Please select a valid option");
+
+        }
+
+    }
 /*
     public static void printList(ArrayList<Book> booklist) {
         for (Book b : booklist) {
@@ -82,8 +87,9 @@ public class BibliotecaApp {
 
 
     public static void borrow(HashMap<Integer, Book> booklist, Integer ID) {
-        if (booklist.get(ID).isAvailable()) {
-            booklist.get(ID).setAvailable(false);
+        Book b = booklist.get(ID);
+        if (b!=null && b.isAvailable()) {
+            b.setAvailable(false);
             System.out.println("Thank you! Enjoy the book");
 
         } else {
@@ -92,8 +98,9 @@ public class BibliotecaApp {
     }
 
     public static void returnBook(HashMap<Integer, Book> booklist, Integer ID) {
-        if (!booklist.get(ID).isAvailable()) {
-            booklist.get(ID).setAvailable(true);
+        Book b = booklist.get(ID);
+        if (b!=null && !b.isAvailable()) {
+            b.setAvailable(true);
             System.out.println("Thank you for returning the book");
 
         } else {
