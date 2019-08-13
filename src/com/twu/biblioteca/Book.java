@@ -1,7 +1,7 @@
 package com.twu.biblioteca;
 
 public class Book {
-    private int id;
+    private Integer id;
     private String title;
     private String author;
     private int year;
@@ -12,7 +12,9 @@ public class Book {
         this.author = author;
         this.year = year;
     }
-
+    public int getID() {
+        return id;
+    }
     public String getTitle() {
         return id +" "+ title;
     }
@@ -43,7 +45,7 @@ public class Book {
 
     public String toString()
     {
-        return id + title + "," + author + ", " + year;
+        return id +" "+ title + ", " + author + ", " + year;
     }
 
 
