@@ -21,38 +21,29 @@ public class BibliotecaApp {
 
 
         //System.out.println(booklist.get(userInput));
-        while(true){
-            showMenu(booklist);
-
-        }
-
-/*        while(true){
+        while(true) {
+            Scanner scanner = new Scanner(System.in);
+            int userInput;
             //Print the options for the user to choose from
-            System.out.println("Enter book ID to see details");
+            System.out.println("*****Menu Options*****");
+            System.out.println("*. Press 1 to see List of books");
+            System.out.println("*. Press 0 to quit");
 
-            int userInput = scanner.nextInt();
-            System.out.println(booklist.get(userInput-1));
+            userInput = scanner.nextInt();
 
-        }*/
+            if (userInput == 1) {
+                printList(booklist);
+            } else if (userInput ==0) {
+                System.exit(0);
+            } else {
+                System.out.println("Please select a valid option");
+            }
 
-    }
 
-    public static void showMenu(ArrayList<Book> booklist) {
-        Scanner scanner = new Scanner(System.in);
-        int userInput;
-        //Print the options for the user to choose from
-        System.out.println("*****Menu Options*****");
-        System.out.println("*. Press 1 to see List of books");
-
-        userInput = scanner.nextInt();
-
-        if (userInput == 1) {
-            printList(booklist);
-        } else {
-            System.out.println("Please select a valid option");
         }
 
     }
+
 
     public static void printList(ArrayList<Book> booklist) {
         for (Book b : booklist) {
