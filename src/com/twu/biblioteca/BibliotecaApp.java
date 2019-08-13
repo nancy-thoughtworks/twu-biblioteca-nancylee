@@ -1,4 +1,5 @@
 package com.twu.biblioteca;
+import java.util.ArrayList;
 
 public class BibliotecaApp {
 
@@ -12,7 +13,16 @@ public class BibliotecaApp {
         booklist.add(book1);
         booklist.add(book2);
         booklist.add(book3);
+        System.out.println("Available books:");
+        printList(booklist);
 
+    }
+
+    public static void printList(ArrayList<Book> booklist) {
+        for (Book b : booklist) {
+            System.out.println(b.getTitle());
+        }
+    }
 
 
 
