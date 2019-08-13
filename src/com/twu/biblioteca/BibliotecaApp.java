@@ -31,18 +31,24 @@ public class BibliotecaApp {
             System.out.println("*****Menu Options*****");
             System.out.println("*. Press s to see List of books");
             System.out.println("*. Press b to borrow a book");
+            System.out.println("*. Press r to borrow a book");
             System.out.println("*. Press q to quit");
 
             char userInput = scanner.next().charAt(0);
-
+            int bookID;
             switch (userInput) {
                 case 's':
                     printList(booklist);
                     break;
                 case 'b':
                     System.out.println("Enter the book ID you wish to borrow");
-                    int bookID = scanner.nextInt();
+                    bookID = scanner.nextInt();
                     borrow(booklist, bookID);
+                    break;
+                case 'r':
+                    System.out.println("Enter the book ID you wish to return");
+                    bookID = scanner.nextInt();
+                    returnBook(booklist, bookID);
                     break;
                 case 'q':
                     System.exit(0);
@@ -82,6 +88,16 @@ public class BibliotecaApp {
 
         } else {
             System.out.println("Sorry that book is not available");
+        }
+    }
+
+    public static void returnBook(HashMap<Integer, Book> booklist, Integer ID) {
+        if (!booklist.get(ID).isAvailable()) {
+            booklist.get(ID).setAvailable(true);
+            System.out.println("Thank you for returning the book");
+
+        } else {
+            System.out.println("That is not a valid book to return");
         }
     }
 
