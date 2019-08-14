@@ -5,6 +5,9 @@ import java.util.Scanner;
 import java.util.HashMap;
 import java.lang.reflect.Array;
 
+/**
+ * Entry point for the app
+ */
 
 
 public class BibliotecaApp {

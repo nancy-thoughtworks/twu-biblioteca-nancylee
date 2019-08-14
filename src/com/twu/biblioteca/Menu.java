@@ -1,4 +1,7 @@
 package com.twu.biblioteca;
+/**
+ * Class for the Menu object
+ */
 
 import java.util.HashMap;
 import java.util.Map;
@@ -36,6 +39,9 @@ public class Menu {
         }
 
     }
+    /*
+    Prints all items in the book list that are available
+     */
 
     public void printList(HashMap<Integer, Book> booklist) {
         for (Map.Entry<Integer, Book> entry : booklist.entrySet()) {
@@ -46,6 +52,10 @@ public class Menu {
         }
     }
 
+    /*
+    If the book exists and is available then it is set to unavailable
+    Otherwise error message is returned
+     */
 
     public String borrow(HashMap<Integer, Book> booklist, Integer ID) {
         Book b = booklist.get(ID);
@@ -57,6 +67,11 @@ public class Menu {
             return "Sorry that book is not available";
         }
     }
+
+    /*
+    If the book exists and is not available then is set to available
+    Otherwise error message returned
+     */
 
     public String returnBook(HashMap<Integer, Book> booklist, Integer ID) {
         Book b = booklist.get(ID);

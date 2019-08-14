@@ -1,5 +1,8 @@
 package com.twu.biblioteca;
 
+/**
+ * Class for the Book object
+ */
 public class Book {
     private Integer id;
     private String title;
