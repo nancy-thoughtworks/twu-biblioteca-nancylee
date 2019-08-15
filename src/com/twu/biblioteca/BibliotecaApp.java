@@ -45,8 +45,8 @@ public class BibliotecaApp {
             //Print the options for the user to choose from
             System.out.println("*****Menu Options*****");
             System.out.println("*. Press s to see List of items");
-            System.out.println("*. Press b to borrow a book");
-            System.out.println("*. Press r to borrow a book");
+            System.out.println("*. Press b to borrow an item");
+            System.out.println("*. Press r to borrow an item");
             System.out.println("*. Press q to quit");
 
             //Menu menu = new Menu();
@@ -59,20 +59,20 @@ public class BibliotecaApp {
     public static void menuOptions(Library library) {
         Scanner scanner = new Scanner(System.in);
         char userInput = scanner.next().charAt(0);
-        int bookID;
+        int itemID;
         switch (userInput) {
             case 's':
                 library.printList();
                 break;
             case 'b':
-                System.out.println("Enter the book ID you wish to borrow");
-                bookID = scanner.nextInt();
-                //borrow(library, bookID);
+                System.out.println("Enter the item ID you wish to borrow");
+                itemID = scanner.nextInt();
+                library.borrow(itemID);
                 break;
             case 'r':
                 System.out.println("Enter the book ID you wish to return");
-                bookID = scanner.nextInt();
-                //returnBook(library, bookID);
+                itemID = scanner.nextInt();
+                library.returnItem(itemID);
                 break;
             case 'q':
                 System.exit(0);

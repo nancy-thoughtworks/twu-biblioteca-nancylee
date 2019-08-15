@@ -46,7 +46,7 @@ public abstract class Item {
         this.available = value;
     }
 
-    public boolean borrow() {
+    public boolean checkOut() {
         if (this.isAvailable()) {
             this.available = false;
             return true;
