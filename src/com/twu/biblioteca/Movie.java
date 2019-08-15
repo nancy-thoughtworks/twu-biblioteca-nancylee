@@ -1,14 +1,14 @@
 package com.twu.biblioteca;
 
 public class Movie {
-    private int ID;
+    private Integer ID;
     private String title;
     private int year;
     private String director;
     private int rating;
 
 
-    public Movie(int ID, String title, int year, String director, int rating) {
+    public Movie(Integer ID, String title, int year, String director, int rating) {
         this.ID = ID;
         this.title = title;
         this.year = year;
@@ -20,7 +20,7 @@ public class Movie {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
