@@ -9,14 +9,14 @@ import java.util.Scanner;
 
 public class Menu {
 
-    public void menuOptions(HashMap<Integer, Book> booklist) {
+/*    public void menuOptions(HashMap<Integer, Book> booklist) {
         Scanner scanner = new Scanner(System.in);
         char userInput = scanner.next().charAt(0);
         int bookID;
         String response;
         switch (userInput) {
             case 's':
-                printList(booklist);
+                bangaloreLibrary.printList();
                 break;
             case 'b':
                 System.out.println("Enter the book ID you wish to borrow");
@@ -38,19 +38,19 @@ public class Menu {
 
         }
 
-    }
+    }*/
     /*
     Prints all items in the book list that are available
      */
 
-    public void printList(HashMap<Integer, Book> booklist) {
+/*    public void printList(HashMap<Integer, Book> booklist) {
         for (Map.Entry<Integer, Book> entry : booklist.entrySet()) {
             if (entry.getValue().isAvailable()) {
                 System.out.println(entry.getValue().toString());
             }
 
         }
-    }
+    }*/
 
     /*
     If the book exists and is available then it is set to unavailable
