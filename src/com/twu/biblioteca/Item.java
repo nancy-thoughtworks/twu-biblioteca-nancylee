@@ -45,4 +45,17 @@ public abstract class Item {
     public void setAvailable(boolean value) {
         this.available = value;
     }
+
+    public boolean borrow() {
+        if (this.isAvailable()) {
+            this.available = false;
+            return true;
+
+        } else {
+            return false;
+        }
+
+    }
+
+
 }
