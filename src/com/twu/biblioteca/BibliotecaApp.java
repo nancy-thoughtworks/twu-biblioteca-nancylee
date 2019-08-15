@@ -84,7 +84,7 @@ public class BibliotecaApp {
 
     }
 
-    public static void printList(ArrayList<Book> booklist) {
+/*    public static void printList(ArrayList<Book> booklist) {
         for (Book b : booklist) {
             System.out.println(b);
         }
@@ -98,10 +98,10 @@ public class BibliotecaApp {
             }
 
         }
-    }
+    }*/
 
 
-    public static void borrow(HashMap<Integer, Book> booklist, Integer ID) {
+/*    public static void borrow(HashMap<Integer, Book> booklist, Integer ID) {
         Book b = booklist.get(ID);
         if (b!=null && b.isAvailable()) {
             b.setAvailable(false);
@@ -121,7 +121,7 @@ public class BibliotecaApp {
         } else {
             System.out.println("That is not a valid book to return");
         }
-    }
+    }*/
 
 
 

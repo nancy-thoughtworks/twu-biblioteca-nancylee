@@ -36,7 +36,7 @@ public class Library {
     public void borrow(Integer itemID) {
         Item i = this.collection.get(itemID);
         if (i.checkOut()) {
-            System.out.println("Thank you for returning the book");
+            System.out.println("Thank you! Enjoy the book");
         } else {
             System.out.println("Sorry that book is not available");
         }
