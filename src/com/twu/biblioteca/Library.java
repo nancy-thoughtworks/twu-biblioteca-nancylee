@@ -17,7 +17,7 @@ public class Library {
 
 
     public void add(Item item) {
-        this.bookCollection.put(item.getID(), item);
+        this.collection.put(item.getID(), item);
     }
 
 
@@ -26,7 +26,7 @@ public class Library {
      */
 
     public void printList() {
-        for (Map.Entry<Integer, Item> entry : bookCollection.entrySet()) {
+        for (Map.Entry<Integer, Item> entry : collection.entrySet()) {
             if (entry.getValue().isAvailable()) {
                 System.out.println(entry.getValue().toString());
             }

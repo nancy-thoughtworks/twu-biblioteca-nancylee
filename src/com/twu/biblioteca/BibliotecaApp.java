@@ -19,9 +19,10 @@ public class BibliotecaApp {
         System.out.println("Welcome to Biblioteca. your one-stop-shop for great book titles in Bangalore!");
         //HashMap<Integer, Book> booklist = new HashMap<Integer, Book>();
         //ArrayList<Book> booklist = new ArrayList<Book>();
-        Book book1 = new Book(1, "The Yield", "Jane Winch", 1990, true);
-        Book book2 = new Book(2, "Lonely Planet", "John Doe", 2000, true);
-        Book book3 = new Book(3, "I am", "Jane Val", 2010, true);
+        int ID = 1;
+        Book book1 = new Book(ID, "The Yield", "Jane Winch", 1990, true);
+        Book book2 = new Book(ID++, "Lonely Planet", "John Doe", 2000, true);
+        Book book3 = new Book(ID++, "I am", "Jane Val", 2010, true);
 
  /*       booklist.put(book1.getID(), book1);
         booklist.put(book2.getID(), book2);
@@ -31,9 +32,11 @@ public class BibliotecaApp {
         bangaloreLibrary.add(book2);
         bangaloreLibrary.add(book3);
 
-        //Movie m1 = new Movie(1, "The Shining", );
-        //Movie m2 = new Book(2, "Lonely Planet", "John Doe", 2000, true);
-        //Book book3 = new Book(3, "I am", "Jane Val", 2010, true);
+        Movie m1 = new Movie(ID++, "The Shining", 2000, "J Cohen", true);
+        Movie m2 = new Movie(ID++, "Fast and Furious", 2010, "Brad Pitt", true);
+
+        bangaloreLibrary.add(m1);
+        bangaloreLibrary.add(m2);
 
 
 
@@ -41,7 +44,7 @@ public class BibliotecaApp {
 
             //Print the options for the user to choose from
             System.out.println("*****Menu Options*****");
-            System.out.println("*. Press s to see List of books");
+            System.out.println("*. Press s to see List of items");
             System.out.println("*. Press b to borrow a book");
             System.out.println("*. Press r to borrow a book");
             System.out.println("*. Press q to quit");
