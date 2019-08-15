@@ -28,6 +28,12 @@ public class BibliotecaApp {
         booklist.put(book3.getID(), book3);*/
 
         bangaloreLibrary.addBook(book1);
+        bangaloreLibrary.addBook(book2);
+        bangaloreLibrary.addBook(book3);
+
+        Movie m1 = new Movie(1, "The Shining", );
+        Movie m2 = new Book(2, "Lonely Planet", "John Doe", 2000, true);
+        Book book3 = new Book(3, "I am", "Jane Val", 2010, true);
 
 
 

@@ -16,8 +16,12 @@ public class Library {
     }
 
 
-    public void addBook(Book book) {
+    public void add(Book book) {
         this.bookCollection.put(book.getID(), book);
+    }
+
+    public void add(Movie movie) {
+        this.movieCollection.put(movie.getID(), movie);
     }
 
     /*
@@ -32,7 +36,9 @@ public class Library {
         }
     }
 
+    public boolean borrow(Book book) {
 
+    }
 
 
 }
