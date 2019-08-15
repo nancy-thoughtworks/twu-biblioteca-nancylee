@@ -1,45 +1,16 @@
 package com.twu.biblioteca;
 
 public class Movie {
-    private Integer ID;
-    private String title;
-    private int year;
     private String director;
     private int rating;
 
 
-    public Movie(Integer ID, String title, int year, String director, int rating) {
-        this.ID = ID;
-        this.title = title;
-        this.year = year;
+    public Movie(Integer ID, String title, int year, String director, boolean available) {
+        super(id, title, year, available);
         this.director = director;
-        this.rating = rating;
+        this.rating = null;
     }
-
-    public int getID() {
-        return ID;
-    }
-
-    public void setID(Integer ID) {
-        this.ID = ID;
-    }
-
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public int getYear() {
-        return year;
-    }
-
-    public void setYear(int year) {
-        this.year = year;
-    }
+    
 
     public String getDirector() {
         return director;

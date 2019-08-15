@@ -6,13 +6,13 @@ import java.util.Map;
 
 public class Library {
 
-    private HashMap<Integer, Item> bookCollection;
-    private HashMap<Integer, Movie> movieCollection;
+    private HashMap<Integer, Item> collection;
+    //private HashMap<Integer, Movie> movieCollection;
 
 
     public Library() {
-        this.bookCollection = new HashMap<Integer, Item>();
-        this.movieCollection = new HashMap<Integer, Movie>();
+        this.collection = new HashMap<Integer, Item>();
+        //this.movieCollection = new HashMap<Integer, Movie>();
     }
 
 
@@ -22,7 +22,7 @@ public class Library {
 
 
     /*
-    Prints all items in the book list that are available
+    Prints all items in the list that are available
      */
 
     public void printList() {
