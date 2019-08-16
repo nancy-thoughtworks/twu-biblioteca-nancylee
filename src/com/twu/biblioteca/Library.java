@@ -1,18 +1,30 @@
 package com.twu.biblioteca;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
+/**
+ * The Library class which holds the collection of items to lend and users
+ */
 
 public class Library {
 
     private HashMap<Integer, Item> collection;
+    private HashMap<String, User> users;
+    //private ArrayList<User> users;
     //private HashMap<Integer, Movie> movieCollection;
+
+    private Admin admin;
+    private User user;
 
 
     public Library() {
         this.collection = new HashMap<Integer, Item>();
+        this.users = new HashMap<String, User>();
+        //this.users = new ArrayList<User>();
         //this.movieCollection = new HashMap<Integer, Movie>();
+
+        this.user = new User("321-4567", "mmm");
+        users.put("123-3334", new Admin("123-3334", "a_password"));
     }
 
 
@@ -20,6 +32,22 @@ public class Library {
         this.collection.put(item.getID(), item);
     }
 
+    public void add(String username, User user) {
+        this.users.put(username, user);
+    }
+
+    /*
+
+     */
+    public boolean login(String username, String password) {
+        User user = lookupUser(username);
+        return user.authenticate(username, password);
+
+    }
+
+    private User lookupUser(String username) {
+        return users.get(username);
+    }
 
     /*
     Prints all items in the list that are available

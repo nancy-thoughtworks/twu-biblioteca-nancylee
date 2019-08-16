@@ -12,7 +12,7 @@ import java.util.HashMap;
 import static org.junit.Assert.assertEquals;
 
 public class ExampleTest {
-    HashMap<Integer, Book> testlist;
+/*    HashMap<Integer, Book> testlist;
     Book book1, book2;
     Menu m;
 
@@ -54,5 +54,5 @@ public class ExampleTest {
         String response = "That is not a valid book to return";
         assertEquals(response, m.returnBook(testlist, 1));
 
-    }
+    }*/
 }

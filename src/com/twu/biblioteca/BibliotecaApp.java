@@ -17,8 +17,7 @@ public class BibliotecaApp {
 
 
         System.out.println("Welcome to Biblioteca. your one-stop-shop for great book titles in Bangalore!");
-        //HashMap<Integer, Book> booklist = new HashMap<Integer, Book>();
-        //ArrayList<Book> booklist = new ArrayList<Book>();
+
         int ID = 1;
         Book book1 = new Book(ID, "The Yield", "Jane Winch", 1990, true);
         Book book2 = new Book(ID++, "Lonely Planet", "John Doe", 2000, true);
@@ -38,19 +37,33 @@ public class BibliotecaApp {
         bangaloreLibrary.add(m1);
         bangaloreLibrary.add(m2);
 
+        Scanner scanner = new Scanner(System.in);
 
+        System.out.println("Enter username");
+        String username = scanner.next();
+
+        System.out.println("Enter password");
+        String password = scanner.next();
+
+        if (bangaloreLibrary.login(username, password)) {
+            System.out.println("login success");
+        } else {
+            System.out.println("login failure");
+        }
 
         while(true) {
 
+
+
             //Print the options for the user to choose from
-            System.out.println("*****Menu Options*****");
+/*            System.out.println("*****Menu Options*****");
             System.out.println("*. Press s to see List of items");
             System.out.println("*. Press b to borrow an item");
             System.out.println("*. Press r to borrow an item");
             System.out.println("*. Press q to quit");
 
             //Menu menu = new Menu();
-            menuOptions(bangaloreLibrary);
+            menuOptions(bangaloreLibrary);*/
 
         }
 

@@ -6,12 +6,14 @@ public class Admin extends User {
         super(username, password);
     }
 
-    @Override
+/*    @Override
     public boolean login() {
         final boolean isAuthenticated = super.login();
         //final boolean isAuthorized = isAllowedToDoThis();
         //return isAuthenticated && isAuthorized;
-    }
+    }*/
+
+    //private boolean isAllowedToDoThis() { }
 
     @Override
     public Menu getMenu() {

@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
-public class Menu {
+public interface Menu {
 
 /*    public void menuOptions(HashMap<Integer, Book> booklist) {
         Scanner scanner = new Scanner(System.in);
@@ -57,7 +57,7 @@ public class Menu {
     Otherwise error message is returned
      */
 
-    public String borrow(HashMap<Integer, Book> booklist, Integer ID) {
+ /*   public String borrow(HashMap<Integer, Book> booklist, Integer ID) {
         Book b = booklist.get(ID);
         if (b!=null && b.isAvailable()) {
             b.setAvailable(false);
@@ -66,14 +66,14 @@ public class Menu {
         } else {
             return "Sorry that book is not available";
         }
-    }
+    }*/
 
     /*
     If the book exists and is not available then is set to available
     Otherwise error message returned
      */
 
-    public String returnBook(HashMap<Integer, Book> booklist, Integer ID) {
+/*    public String returnBook(HashMap<Integer, Book> booklist, Integer ID) {
         Book b = booklist.get(ID);
         if (b!=null && !b.isAvailable()) {
             b.setAvailable(true);
@@ -82,5 +82,5 @@ public class Menu {
         } else {
             return "That is not a valid book to return";
         }
-    }
+    }*/
 }
