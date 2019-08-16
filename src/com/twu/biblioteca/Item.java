@@ -15,6 +15,12 @@ public abstract class Item {
         this.available = available;
     }
 
+    public String getLoanDetails()
+    {
+        return this.id + " " + this.title + " loaned by " +borrower;
+    }
+
+
     public int getID() {
         return id;
     }
@@ -45,6 +51,10 @@ public abstract class Item {
 
     public void setAvailable(boolean value) {
         this.available = value;
+    }
+
+    public void setBorrower(User b) {
+        this.borrower = b;
     }
 
     public boolean checkOut() {

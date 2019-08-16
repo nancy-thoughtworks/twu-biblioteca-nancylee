@@ -1,24 +1,29 @@
 package com.twu.biblioteca;
 
 import java.util.*;
-
+import java.util.HashMap;
 /**
  * Normal user class
  */
 public abstract class User {
     private String username;
     private String password;
+    private HashMap<Integer, Item> collection;
 
 
-    public User(String username, String password) {
+    public User(String username, String password, HashMap<Integer, Item> collection) {
         this.username = username;
         this.password = password;
+        this.collection = collection;
 
     }
 
     public boolean authenticate(String username, String pass) {
         return this.username.equals(username) && this.password.equals(pass);
+
     }
+
+
 
  /*   public boolean login() {
         return correctPassword && correctUsername;

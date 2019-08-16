@@ -1,6 +1,7 @@
 package com.twu.biblioteca;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class Borrower extends User {
     private String name;
@@ -9,8 +10,8 @@ public class Borrower extends User {
     private ArrayList<Item> itemsLoaned;
     private UserMenu menu;
 
-    public Borrower(String username, String password, String name, String email, int phone) {
-        super(username, password);
+    public Borrower(String username, String password, HashMap<Integer, Item> collection, String name, String email, int phone) {
+        super(username, password, collection);
         this.name = name;
         this.email = email;
         this.phone = phone;

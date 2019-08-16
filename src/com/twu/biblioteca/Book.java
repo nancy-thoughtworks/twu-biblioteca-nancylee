@@ -26,5 +26,4 @@ public class Book extends Item {
         return this.getID() +" "+ this.getTitle() + ", " + this.author + ", " + this.getYear();
     }
 
-
 }

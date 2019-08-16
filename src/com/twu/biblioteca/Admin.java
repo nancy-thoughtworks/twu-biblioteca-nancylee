@@ -1,13 +1,17 @@
 package com.twu.biblioteca;
 
+import java.util.HashMap;
+
 /**
  * Admin class extend user
  * Has extra privileges
  */
 public class Admin extends User {
+    private AdminMenu menu;
 
-    public Admin(String username, String password) {
-        super(username, password);
+    public Admin(String username, String password, HashMap<Integer, Item> collection) {
+        super(username, password,collection);
+        this.menu = new AdminMenu(collection);
     }
 
 /*    @Override
@@ -20,6 +24,8 @@ public class Admin extends User {
     //private boolean isAllowedToDoThis() { }
 
     public void getMenu() {
-         //new AdminMenu();
+        System.out.println("Welcome \n");
+
+        menu.show();
     }
 }

@@ -37,13 +37,13 @@ public class BibliotecaApp {
         bangaloreLibrary.add(m1);
         bangaloreLibrary.add(m2);
 
-        bangaloreLibrary.createUser("123-3334", new Admin("123-3334", "a_password"));
+
         //users.put();
         //Borrower b = new Borrower("321-4567", "mmm");
         //users.put("321-4567", b);
-        bangaloreLibrary.createUser("111-1111", new Borrower("111-1111", "mmm", "john doe","alskdj@jfdl.com", 4848444));
+        bangaloreLibrary.createUser("111-1111", new Borrower("111-1111", "mmm", bangaloreLibrary.getItems(),"john doe","alskdj@jfdl.com", 4848444));
 
-
+        bangaloreLibrary.createUser("123-3334", new Admin("123-3334", "a_password", bangaloreLibrary.getItems() ) );
 
 
         Scanner scanner = new Scanner(System.in);
@@ -62,7 +62,6 @@ public class BibliotecaApp {
         }
 
         while(true) {
-
 
 
             //Print the options for the user to choose from

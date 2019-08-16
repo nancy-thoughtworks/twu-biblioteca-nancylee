@@ -1,10 +1,13 @@
 package com.twu.biblioteca;
+import java.util.HashMap;
 import java.util.Scanner;
 
 
 public class UserMenu implements Menu {
+    private HashMap<Integer, Item> library;
 
     public UserMenu() {
+        //this.library = collection;
     }
 
     public void show() {

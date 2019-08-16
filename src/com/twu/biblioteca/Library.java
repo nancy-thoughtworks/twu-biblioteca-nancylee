@@ -13,8 +13,6 @@ public class Library {
     //private ArrayList<User> users;
     //private HashMap<Integer, Movie> movieCollection;
 
-    private Admin admin;
-    private User user;
 
 
     public Library() {
@@ -25,9 +23,6 @@ public class Library {
 
 
     }
-
-
-
 
 
     public void add(Item item) {
@@ -60,6 +55,13 @@ public class Library {
         return collection.get(id);
     }
 
+    public HashMap<Integer, Item> getItems() {
+        return collection;
+    }
+
+    public HashMap<String, User> getUsers() {
+        return users;
+    }
     /*
     Prints all items in the list that are available
      */
