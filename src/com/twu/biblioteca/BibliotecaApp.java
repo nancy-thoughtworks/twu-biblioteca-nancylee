@@ -27,52 +27,45 @@ public class BibliotecaApp {
         booklist.put(book2.getID(), book2);
         booklist.put(book3.getID(), book3);*/
 
-        bangaloreLibrary.add(book1);
-        bangaloreLibrary.add(book2);
-        bangaloreLibrary.add(book3);
+        bangaloreLibrary.create(book1);
+        bangaloreLibrary.create(book2);
+        bangaloreLibrary.create(book3);
 
         Movie m1 = new Movie(ID++, "The Shining", 2000, "J Cohen", true);
         Movie m2 = new Movie(ID++, "Fast and Furious", 2010, "Brad Pitt", false);
 
-        bangaloreLibrary.add(m1);
-        bangaloreLibrary.add(m2);
+        bangaloreLibrary.create(m1);
+        bangaloreLibrary.create(m2);
 
 
         //users.put();
         //Borrower b = new Borrower("321-4567", "mmm");
         //users.put("321-4567", b);
-        bangaloreLibrary.createUser("111-1111", new Borrower("111-1111", "mmm", bangaloreLibrary.getItems(),"john doe","alskdj@jfdl.com", 4848444));
+        bangaloreLibrary.createUser("111-1111", new Borrower("111-1111", "mmm", bangaloreLibrary.getInventory(),"john doe","alskdj@jfdl.com", 4848444));
 
-        bangaloreLibrary.createUser("123-3334", new Admin("123-3334", "a_password", bangaloreLibrary.getItems() ) );
+        bangaloreLibrary.createUser("123-3334", new Admin("123-3334", "a_password", bangaloreLibrary.getInventory() ) );
 
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println("*****LOGIN*****");
-        System.out.println("Enter username");
-        String username = scanner.next();
 
-        System.out.println("Enter password");
-        String password = scanner.next();
-
-        if (bangaloreLibrary.login(username, password)) {
-            System.out.println("login success");
-            bangaloreLibrary.getUserMenu(username);
-        } else {
-            System.out.println("login failure");
-        }
 
         while(true) {
+            System.out.println("*****LOGIN*****");
+            System.out.println("Enter username");
+            String username = scanner.next();
 
+            System.out.println("Enter password");
+            String password = scanner.next();
 
-            //Print the options for the user to choose from
-/*            System.out.println("*****Menu Options*****");
-            System.out.println("*. Press s to see List of items");
-            System.out.println("*. Press b to borrow an item");
-            System.out.println("*. Press r to borrow an item");
-            System.out.println("*. Press q to quit");
+            if (bangaloreLibrary.login(username, password)) {
+                System.out.println("login success");
+                while (true) {
+                    bangaloreLibrary.getUserMenu(username);
+                }
+            } else {
+                System.out.println("login failure");
+            }
 
-            //Menu menu = new Menu();
-            menuOptions(bangaloreLibrary);*/
 
         }
 

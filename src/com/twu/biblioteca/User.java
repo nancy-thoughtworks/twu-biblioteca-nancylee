@@ -8,10 +8,10 @@ import java.util.HashMap;
 public abstract class User {
     private String username;
     private String password;
-    private HashMap<Integer, Item> collection;
+    private Inventory collection;
 
 
-    public User(String username, String password, HashMap<Integer, Item> collection) {
+    public User(String username, String password, Inventory collection) {
         this.username = username;
         this.password = password;
         this.collection = collection;

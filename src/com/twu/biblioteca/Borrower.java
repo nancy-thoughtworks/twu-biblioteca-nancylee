@@ -10,13 +10,13 @@ public class Borrower extends User {
     private ArrayList<Item> itemsLoaned;
     private UserMenu menu;
 
-    public Borrower(String username, String password, HashMap<Integer, Item> collection, String name, String email, int phone) {
+    public Borrower(String username, String password, Inventory collection, String name, String email, int phone) {
         super(username, password, collection);
         this.name = name;
         this.email = email;
         this.phone = phone;
         this.itemsLoaned = new ArrayList<Item>();
-        this.menu = new UserMenu();
+        this.menu = new UserMenu(collection);
     }
 
     public void getMenu() {

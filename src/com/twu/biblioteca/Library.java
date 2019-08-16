@@ -8,7 +8,8 @@ import java.util.*;
 
 public class Library {
 
-    private HashMap<Integer, Item> collection;
+    //private HashMap<Integer, Item> collection;
+    private Inventory inventory;
     private HashMap<String, User> users;
     //private ArrayList<User> users;
     //private HashMap<Integer, Movie> movieCollection;
@@ -16,7 +17,8 @@ public class Library {
 
 
     public Library() {
-        this.collection = new HashMap<Integer, Item>();
+        //this.collection = new HashMap<Integer, Item>();
+        this.inventory = new Inventory();
         this.users = new HashMap<String, User>();
         //this.users = new ArrayList<User>();
         //this.movieCollection = new HashMap<Integer, Movie>();
@@ -24,10 +26,16 @@ public class Library {
 
     }
 
-
-    public void add(Item item) {
-        this.collection.put(item.getID(), item);
+    public void create(Item item) {
+        inventory.add(item);
     }
+    public Inventory getInventory() {
+        return inventory;
+    }
+
+    /*public void add(Item item) {
+        this.collection.put(item.getID(), item);
+    }*/
 
     public void createUser(String username, User user) {
         this.users.put(username, user);
@@ -51,13 +59,13 @@ public class Library {
         return users.get(username);
     }
 
-    private Item lookupItem(Integer id) {
+/*    private Item lookupItem(Integer id) {
         return collection.get(id);
     }
 
     public HashMap<Integer, Item> getItems() {
         return collection;
-    }
+    }*/
 
     public HashMap<String, User> getUsers() {
         return users;
@@ -66,22 +74,22 @@ public class Library {
     Prints all items in the list that are available
      */
 
-    public void printList() {
+/*    public void printList() {
         for (Map.Entry<Integer, Item> entry : collection.entrySet()) {
             if (entry.getValue().isAvailable()) {
                 System.out.println(entry.getValue().toString());
             }
         }
-    }
+    }*/
 
-    public void borrow(Integer itemID) {
+/*    public void borrow(Integer itemID) {
         Item i = this.collection.get(itemID);
         if (i.checkOut()) {
             System.out.println("Thank you! Enjoy the book");
         } else {
             System.out.println("Sorry that book is not available");
         }
-    }
+    }*/
 
 /*    public void borrow(Integer itemID) {
         Item i = this.collection.get(itemID);

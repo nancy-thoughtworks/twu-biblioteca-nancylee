@@ -4,10 +4,12 @@ import java.util.Scanner;
 
 
 public class UserMenu implements Menu {
-    private HashMap<Integer, Item> library;
+    private Inventory library;
+    private User user;
 
-    public UserMenu() {
-        //this.library = collection;
+    public UserMenu(Inventory collection) {
+        this.library = collection;
+        //this.user = user;
     }
 
     public void show() {
@@ -22,12 +24,12 @@ public class UserMenu implements Menu {
         int itemID;
         switch (userInput) {
             case 's':
-                //library.printList();
+                library.printList();
                 break;
             case 'b':
                 System.out.println("Enter the item ID you wish to borrow");
                 itemID = scanner.nextInt();
-                //ibrary.borrow(itemID);
+                //user.borrow(itemID);
                 break;
             case 'r':
                 System.out.println("Enter the book ID you wish to return");

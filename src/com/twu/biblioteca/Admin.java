@@ -9,7 +9,7 @@ import java.util.HashMap;
 public class Admin extends User {
     private AdminMenu menu;
 
-    public Admin(String username, String password, HashMap<Integer, Item> collection) {
+    public Admin(String username, String password, Inventory collection) {
         super(username, password,collection);
         this.menu = new AdminMenu(collection);
     }
