@@ -12,9 +12,9 @@ import java.lang.reflect.Array;
 
 public class BibliotecaApp {
 
-    public static void main(String[] args) {
-        Library bangaloreLibrary = new Library();
 
+    public static void main(String[] args) {
+        Library bangaloreLibrary= new Library();
 
         System.out.println("Welcome to Biblioteca. your one-stop-shop for great book titles in Bangalore!");
 
@@ -32,13 +32,22 @@ public class BibliotecaApp {
         bangaloreLibrary.add(book3);
 
         Movie m1 = new Movie(ID++, "The Shining", 2000, "J Cohen", true);
-        Movie m2 = new Movie(ID++, "Fast and Furious", 2010, "Brad Pitt", true);
+        Movie m2 = new Movie(ID++, "Fast and Furious", 2010, "Brad Pitt", false);
 
         bangaloreLibrary.add(m1);
         bangaloreLibrary.add(m2);
 
-        Scanner scanner = new Scanner(System.in);
+        bangaloreLibrary.createUser("123-3334", new Admin("123-3334", "a_password"));
+        //users.put();
+        //Borrower b = new Borrower("321-4567", "mmm");
+        //users.put("321-4567", b);
+        bangaloreLibrary.createUser("111-1111", new Borrower("111-1111", "mmm", "alskdj@jfdl.com", 4848444));
 
+
+
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("*****LOGIN*****");
         System.out.println("Enter username");
         String username = scanner.next();
 
@@ -47,6 +56,7 @@ public class BibliotecaApp {
 
         if (bangaloreLibrary.login(username, password)) {
             System.out.println("login success");
+            bangaloreLibrary.getUserMenu(username);
         } else {
             System.out.println("login failure");
         }
@@ -69,7 +79,7 @@ public class BibliotecaApp {
 
     }
 
-    public static void menuOptions(Library library) {
+/*    public static void menuOptions(Library library) {
         Scanner scanner = new Scanner(System.in);
         char userInput = scanner.next().charAt(0);
         int itemID;
@@ -85,7 +95,7 @@ public class BibliotecaApp {
             case 'r':
                 System.out.println("Enter the book ID you wish to return");
                 itemID = scanner.nextInt();
-                library.returnItem(itemID);
+                //library.returnItem(itemID);
                 break;
             case 'q':
                 System.exit(0);
@@ -95,7 +105,7 @@ public class BibliotecaApp {
 
         }
 
-    }
+    }*/
 
 /*    public static void printList(ArrayList<Book> booklist) {
         for (Book b : booklist) {

@@ -6,6 +6,7 @@ public abstract class Item {
     private String title;
     private int year;
     private boolean available;
+    private User borrower;
 
     public Item(int id, String title, int year, boolean available) {
         this.id = id;

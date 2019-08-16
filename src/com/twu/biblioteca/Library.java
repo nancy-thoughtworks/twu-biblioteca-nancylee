@@ -23,18 +23,21 @@ public class Library {
         //this.users = new ArrayList<User>();
         //this.movieCollection = new HashMap<Integer, Movie>();
 
-        this.user = new User("321-4567", "mmm");
-        users.put("123-3334", new Admin("123-3334", "a_password"));
+
     }
+
+
+
 
 
     public void add(Item item) {
         this.collection.put(item.getID(), item);
     }
 
-    public void add(String username, User user) {
+    public void createUser(String username, User user) {
         this.users.put(username, user);
     }
+
 
     /*
 
@@ -42,11 +45,19 @@ public class Library {
     public boolean login(String username, String password) {
         User user = lookupUser(username);
         return user.authenticate(username, password);
+    }
 
+    public void getUserMenu(String username) {
+        User u = lookupUser(username);
+        u.getMenu();
     }
 
     private User lookupUser(String username) {
         return users.get(username);
+    }
+
+    private Item lookupItem(Integer id) {
+        return collection.get(id);
     }
 
     /*
@@ -70,6 +81,15 @@ public class Library {
         }
     }
 
+/*    public void borrow(Integer itemID) {
+        Item i = this.collection.get(itemID);
+        if (i.checkOut()) {
+            System.out.println("Thank you! Enjoy the book");
+        } else {
+            System.out.println("Sorry that book is not available");
+        }
+    }
+
     public void returnItem(Integer itemID) {
         Item i = this.collection.get(itemID);
         if (i!=null && !i.isAvailable()) {
@@ -79,7 +99,7 @@ public class Library {
         } else {
             System.out.println( "That is not a valid book to return");
         }
-    }
+    }*/
 
 
 

@@ -1,12 +1,19 @@
 package com.twu.biblioteca;
 
-public class User {
+import java.util.*;
+
+/**
+ * Normal user class
+ */
+public abstract class User {
     private String username;
     private String password;
+
 
     public User(String username, String password) {
         this.username = username;
         this.password = password;
+
     }
 
     public boolean authenticate(String username, String pass) {
@@ -17,9 +24,32 @@ public class User {
         return correctPassword && correctUsername;
     }*/
 
-    public Menu getMenu() {
-        return new UserMenu();
+    public abstract void getMenu();
+
+/*    public boolean borrow(Integer itemID) {
+        Item i = this.collection.get(itemID);
+        if (i.checkOut()) {
+            i.setAvailable(false);
+            System.out.println("Thank you! Enjoy the book");
+            return true;
+        } else {
+            System.out.println("Sorry that book is not available");
+            return false;
+        }
     }
+
+    public boolean returnItem(Integer itemID) {
+        Item i = this.collection.get(itemID);
+        if (i != null && !i.isAvailable()) {
+            i.setAvailable(true);
+            System.out.println("Thank you for returning the book");
+            return true;
+
+        } else {
+            System.out.println("That is not a valid book to return");
+            return false;
+        }
+    }*/
 
 
 

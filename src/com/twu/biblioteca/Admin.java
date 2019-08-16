@@ -1,5 +1,9 @@
 package com.twu.biblioteca;
 
+/**
+ * Admin class extend user
+ * Has extra privileges
+ */
 public class Admin extends User {
 
     public Admin(String username, String password) {
@@ -15,8 +19,7 @@ public class Admin extends User {
 
     //private boolean isAllowedToDoThis() { }
 
-    @Override
-    public Menu getMenu() {
-        return new AdminMenu();
+    public void getMenu() {
+         //new AdminMenu();
     }
 }
