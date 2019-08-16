@@ -68,5 +68,18 @@ public abstract class Item {
 
     }
 
+    public boolean borrow(Item i) {
+        //Item i = this.collection.get(itemID);
+        if (i.checkOut()) {
+            i.setAvailable(false);
+            //itemsLoaned.add(i);
+            System.out.println("Thank you! Enjoy the book");
+            return true;
+        } else {
+            System.out.println("Sorry that book is not available");
+            return false;
+        }
+    }
+
 
 }

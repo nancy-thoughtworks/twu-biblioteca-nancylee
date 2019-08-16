@@ -52,12 +52,15 @@ public class Library {
 
     public void getUserMenu(String username) {
         User u = lookupUser(username);
-        u.getMenu();
+            u.getMenu();
+
     }
 
     private User lookupUser(String username) {
         return users.get(username);
     }
+
+
 
 /*    private Item lookupItem(Integer id) {
         return collection.get(id);
@@ -91,15 +94,8 @@ public class Library {
         }
     }*/
 
-/*    public void borrow(Integer itemID) {
-        Item i = this.collection.get(itemID);
-        if (i.checkOut()) {
-            System.out.println("Thank you! Enjoy the book");
-        } else {
-            System.out.println("Sorry that book is not available");
-        }
-    }
 
+/*
     public void returnItem(Integer itemID) {
         Item i = this.collection.get(itemID);
         if (i!=null && !i.isAvailable()) {

@@ -7,7 +7,7 @@ public class Borrower extends User {
     private String name;
     private String email;
     private int phone;
-    private ArrayList<Item> itemsLoaned;
+    //private ArrayList<Item> itemsLoaned;
     private UserMenu menu;
 
     public Borrower(String username, String password, Inventory collection, String name, String email, int phone) {
@@ -15,14 +15,13 @@ public class Borrower extends User {
         this.name = name;
         this.email = email;
         this.phone = phone;
-        this.itemsLoaned = new ArrayList<Item>();
+        //this.itemsLoaned = new ArrayList<Item>();
         this.menu = new UserMenu(collection);
     }
 
     public void getMenu() {
         System.out.println("Welcome " + toString());
-
-        menu.show();
+        while (true) menu.show();
     }
 
     public String toString()
@@ -31,7 +30,7 @@ public class Borrower extends User {
     }
 
 
-    public boolean borrow(Item i) {
+/*    public boolean borrow(Item i) {
         //Item i = this.collection.get(itemID);
         if (i.checkOut()) {
             i.setAvailable(false);
@@ -42,7 +41,7 @@ public class Borrower extends User {
             System.out.println("Sorry that book is not available");
             return false;
         }
-    }
+    }*/
 
     public boolean returnItem(Item i) {
         //Item i = this.collection.get(itemID);

@@ -49,7 +49,7 @@ public class BibliotecaApp {
         Scanner scanner = new Scanner(System.in);
 
 
-        while(true) {
+        //while(true) {
             System.out.println("*****LOGIN*****");
             System.out.println("Enter username");
             String username = scanner.next();
@@ -59,15 +59,15 @@ public class BibliotecaApp {
 
             if (bangaloreLibrary.login(username, password)) {
                 System.out.println("login success");
-                while (true) {
-                    bangaloreLibrary.getUserMenu(username);
-                }
+
+                bangaloreLibrary.getUserMenu(username);
+
             } else {
                 System.out.println("login failure");
             }
 
 
-        }
+        //}
 
     }
 
