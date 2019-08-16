@@ -9,8 +9,9 @@ public class Borrower extends User {
     private ArrayList<Item> itemsLoaned;
     private UserMenu menu;
 
-    public Borrower(String username, String password, String email, int phone) {
+    public Borrower(String username, String password, String name, String email, int phone) {
         super(username, password);
+        this.name = name;
         this.email = email;
         this.phone = phone;
         this.itemsLoaned = new ArrayList<Item>();
@@ -18,7 +19,14 @@ public class Borrower extends User {
     }
 
     public void getMenu() {
+        System.out.println("Welcome " + toString());
+
         menu.show();
+    }
+
+    public String toString()
+    {
+        return this.name +"\n"+  "email: " + this.email+ "\nphone:" + this.phone;
     }
 
 

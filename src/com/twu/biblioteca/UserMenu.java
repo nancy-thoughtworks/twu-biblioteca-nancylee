@@ -8,6 +8,7 @@ public class UserMenu implements Menu {
     }
 
     public void show() {
+
             System.out.println("*****Menu Options*****");
             System.out.println("*. Press s to see List of items");
             System.out.println("*. Press b to borrow an item");
