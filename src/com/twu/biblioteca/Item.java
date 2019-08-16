@@ -1,5 +1,8 @@
 package com.twu.biblioteca;
 
+/***
+ * Item class setting out basic attributes
+ */
 public abstract class Item {
 
     private Integer id;

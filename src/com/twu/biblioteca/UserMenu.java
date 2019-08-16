@@ -2,6 +2,9 @@ package com.twu.biblioteca;
 import java.util.HashMap;
 import java.util.Scanner;
 
+/***
+ * User menu to show to borrowers
+ */
 
 public class UserMenu implements Menu {
     private Inventory library;

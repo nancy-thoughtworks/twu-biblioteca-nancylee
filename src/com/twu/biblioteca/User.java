@@ -3,7 +3,7 @@ package com.twu.biblioteca;
 import java.util.*;
 import java.util.HashMap;
 /**
- * Normal user class
+ * Abstract user class
  */
 public abstract class User {
     private String username;

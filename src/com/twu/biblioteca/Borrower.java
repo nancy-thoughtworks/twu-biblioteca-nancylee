@@ -3,6 +3,10 @@ package com.twu.biblioteca;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/***
+ * normal user class
+ * limited privileges
+ */
 public class Borrower extends User {
     private String name;
     private String email;

@@ -3,6 +3,9 @@ package com.twu.biblioteca;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Inventory class holding the collection of items
+ */
 public class Inventory {
 
     private HashMap<Integer, Item> collection;

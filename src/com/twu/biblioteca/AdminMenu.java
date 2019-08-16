@@ -2,6 +2,9 @@ package com.twu.biblioteca;
 
 import java.util.HashMap;
 
+/***
+ * Admin menu to show to librarian
+ */
 public class AdminMenu implements Menu {
     private Inventory collection;
 
