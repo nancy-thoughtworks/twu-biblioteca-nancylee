@@ -8,6 +8,8 @@ import java.util.Map;
  */
 public class Inventory {
 
+    private static Inventory inventory = new Inventory();
+
     private HashMap<Integer, Item> collection;
 
     public Inventory() {
@@ -24,6 +26,10 @@ public class Inventory {
 
     public HashMap<Integer, Item> getItems() {
         return collection;
+    }
+
+    public static Inventory getInstance() {
+        return inventory;
     }
 
     public void checkout(Integer itemID) {

@@ -18,12 +18,7 @@ import static org.junit.Assert.assertEquals;
 
 public class ExampleTest {
 
-    @RunWith(MockitoJUnitRunner.class)
-    public class ItemTest {
-
-    }
-
-/*    @Mock
+    @Mock
     MyDatabase databaseMock;
 
     @Rule
@@ -35,7 +30,7 @@ public class ExampleTest {
         boolean check = i.query("* from t");
         assertTrue(check);
         verify(databaseMock).query("* from t");
-    }*/
+    }
 
 /*
     Inventory testlist;
