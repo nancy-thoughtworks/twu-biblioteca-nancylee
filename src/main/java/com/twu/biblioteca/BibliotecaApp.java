@@ -32,7 +32,7 @@ public class BibliotecaApp {
         bangaloreLibrary.create(book3);
 
         Movie m1 = new Movie(ID++, "The Shining", 2000, "J Cohen", true);
-        Movie m2 = new Movie(ID++, "Fast and Furious", 2010, "Brad Pitt", false);
+        Movie m2 = new Movie(ID++, "Fast and Furious", 2010, "Brad Pitt", true);
 
         bangaloreLibrary.create(m1);
         bangaloreLibrary.create(m2);

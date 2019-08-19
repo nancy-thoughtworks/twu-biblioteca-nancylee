@@ -12,22 +12,26 @@ import java.util.HashMap;
 import static org.junit.Assert.assertEquals;
 
 public class ExampleTest {
-/*    HashMap<Integer, Book> testlist;
-    Book book1, book2;
-    Menu m;
+    Inventory testlist;
+    Book testBook;
+    Movie testMovie;
+    Borrower b;
+    Admin a;
+
 
     @Before
     public void setUp() {
-        m = new Menu();
-        testlist = new HashMap<Integer, Book>();
-        book1 = new Book(1, "A book", "Eleanor Gooodall", 1704, true);
-        book2 = new Book(2, "Something interesting", "John Doe", 2017, false);
+        testBook = new Book(1, "A book", "Eleanor Gooodall", 1704, true);
+        testMovie = new Movie(2, "The Lion King", 2019, "J Cohen", true);
+        testlist.add(testBook);
+        testlist.add(testMovie);
 
-        testlist.put(book1.getID(), book1);
-        testlist.put(book2.getID(), book2);
+        b = new Borrower("111-1111", "mmm", testlist,"john doe","alskdj@jfdl.com", 4848444);
+        a = new Admin("222-2222", "aaa", testlist);
 
     }
 
+/*
     @Test
     public void testBorrowPositive() {
         String response = "Thank you! Enjoy the book";

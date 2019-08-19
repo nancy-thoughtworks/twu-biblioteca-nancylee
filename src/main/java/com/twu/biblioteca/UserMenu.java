@@ -32,7 +32,7 @@ public class UserMenu implements Menu {
             case 'b':
                 System.out.println("Enter the item ID you wish to borrow");
                 itemID = scanner.nextInt();
-                library. checkout(itemID);
+                library.checkout(itemID);
                 //user.borrow(itemID);
                 break;
             case 'r':
